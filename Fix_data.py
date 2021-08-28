@@ -4,7 +4,7 @@ import json
 from time import sleep
 
 Pais = str(input('Seu pais: '))
-Estado = str(input('Seu estado: ')
+Estado = str(input('Seu estado: '))
 
 url = f"http://worldtimeapi.org/api/timezone/{Pais.capitalize()}/{Estado.capitalize()}"
 
