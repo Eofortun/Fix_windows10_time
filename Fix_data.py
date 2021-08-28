@@ -3,7 +3,10 @@ import os
 import json
 from time import sleep
 
-url = "http://worldtimeapi.org/api/timezone/America/Maceio"
+Pais = str(input('Seu pais: '))
+Estado = str(input('Seu estado: ')
+
+url = f"http://worldtimeapi.org/api/timezone/{Pais.capitalize()}/{Estado.capitalize()}"
 
 #Faz a requisição no Worldtimeapi.org
 dados_json = requests.get(url)
@@ -41,20 +44,4 @@ sleep(2)
 os.system("time " + hora)
 
 
-'''
-#Ajustar Hora no sistema
-#É possivel fazer algumas mudanças para entrada de dados no Windows 10 como alterar posição dia/mes/ano.
-
-
-#DD/MM/AAAA
-hoje = '22/04/2002'
-data = 'date ' + hoje
-
-#H/M/S = Horas/Minutos/Segundos
-hora = 'time ' + '10:22:00'
-
-os.system(data)
-os.system(hora)
-
-'''
 #BASEADO EM https://lecram.tumblr.com/post/2952089335/relogio-windows
