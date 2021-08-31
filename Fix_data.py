@@ -9,7 +9,6 @@ url = f"http://worldtimeapi.org/api/timezone/America/Maceio"
 #Faz a requisição no Worldtimeapi.org
 dados_json = requests.get(url)
 
-
 #Mostra o json completo
 #print(dados_json.text)
 
@@ -40,6 +39,5 @@ os.system("date " + form_data)
 sleep(2)
 #Altera a hora.
 os.system("time " + hora)
-
 
 #BASEADO EM https://lecram.tumblr.com/post/2952089335/relogio-windows
