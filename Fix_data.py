@@ -3,10 +3,8 @@ import os
 import json
 from time import sleep
 
-Pais = str(input('Seu pais: '))
-Estado = str(input('Seu estado: '))
-
-url = f"http://worldtimeapi.org/api/timezone/{Pais.capitalize()}/{Estado.capitalize()}"
+#Leia o README.md para alterar seu fuso/localização
+url = f"http://worldtimeapi.org/api/timezone/America/Maceio"
 
 #Faz a requisição no Worldtimeapi.org
 dados_json = requests.get(url)
@@ -36,11 +34,11 @@ print(f"Data:{form_data}\nHora:{hora}")
 
 
 sleep(2)
-#os.system('date ') Altera data do sistema.
+#Altera data do sistema.
 os.system("date " + form_data)
 
 sleep(2)
-#os.system('time ') Altera a hora.
+#Altera a hora.
 os.system("time " + hora)
 
 
